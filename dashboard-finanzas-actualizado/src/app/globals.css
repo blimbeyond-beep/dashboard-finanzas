@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark Luxury (default) */
+  --bg: #000000; /* negro absoluto */
+  --surface: #0b0b0d; /* gris muy oscuro */
+  --surface-2: #111114;
+  --border: #1f1f24;
+  --text: #e8e8ea;
+  --muted: #a2a2ab;
+  --gold: #D4AF37;
+  --gold-2: #e6cf86;
+  --danger: #ff5d5d;
+  --success: #064E3B;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold2: var(--gold-2);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Selección sutil "luxury" */
+::selection {
+  background: color-mix(in srgb, var(--gold) 35%, transparent);
+}
